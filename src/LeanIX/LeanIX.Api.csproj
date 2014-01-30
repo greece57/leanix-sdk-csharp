@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA7E17E2-95DA-4A32-98C5-B345915BAF71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>LeanIX.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>LeanIX</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\BusinessCapabilitiesApi.cs" />
+    <Compile Include="Api\BusinessObjectsApi.cs" />
+    <Compile Include="Api\Common\ApiClient.cs" />
+    <Compile Include="Api\Common\ApiException.cs" />
+    <Compile Include="Api\ConsumersApi.cs" />
+    <Compile Include="Api\Models\BusinessCapability.cs" />
+    <Compile Include="Api\Models\BusinessObject.cs" />
+    <Compile Include="Api\Models\Consumer.cs" />
+    <Compile Include="Api\Models\Process.cs" />
+    <Compile Include="Api\Models\Project.cs" />
+    <Compile Include="Api\Models\ProjectHasProvider.cs" />
+    <Compile Include="Api\Models\ProjectUpdate.cs" />
+    <Compile Include="Api\Models\Provider.cs" />
+    <Compile Include="Api\Models\Resource.cs" />
+    <Compile Include="Api\Models\ResourceCapability.cs" />
+    <Compile Include="Api\Models\ResourceHasProviderHW.cs" />
+    <Compile Include="Api\Models\ResourceHasProviderSvc.cs" />
+    <Compile Include="Api\Models\ResourceHasProviderSW.cs" />
+    <Compile Include="Api\Models\ResourceHasResourceCapability.cs" />
+    <Compile Include="Api\Models\Service.cs" />
+    <Compile Include="Api\Models\ServiceHasBusinessCapability.cs" />
+    <Compile Include="Api\Models\ServiceHasBusinessObject.cs" />
+    <Compile Include="Api\Models\ServiceHasConsumer.cs" />
+    <Compile Include="Api\Models\ServiceHasInterface.cs" />
+    <Compile Include="Api\Models\ServiceHasProcess.cs" />
+    <Compile Include="Api\Models\ServiceHasProject.cs" />
+    <Compile Include="Api\Models\ServiceHasResourceHW.cs" />
+    <Compile Include="Api\Models\ServiceHasResourceSvc.cs" />
+    <Compile Include="Api\Models\ServiceHasResourceSW.cs" />
+    <Compile Include="Api\ProcessesApi.cs" />
+    <Compile Include="Api\ProjectsApi.cs" />
+    <Compile Include="Api\ProvidersApi.cs" />
+    <Compile Include="Api\ResourceCapabilitiesApi.cs" />
+    <Compile Include="Api\ResourcesApi.cs" />
+    <Compile Include="Api\ServicesApi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
