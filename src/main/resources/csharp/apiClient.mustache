@@ -29,9 +29,9 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace LeanIX.Api.Common {
+namespace {{invokerPackage}} {
 	public class ApiClient {
-	private string basePath = "";
+	private string basePath = "{{basePath}}";
 		private static readonly ApiClient _instance = new ApiClient();
 		private Dictionary<String, String> defaultHeaderMap = new Dictionary<String, String>();
 
@@ -137,4 +137,3 @@ namespace LeanIX.Api.Common {
 
 	}
 }
-

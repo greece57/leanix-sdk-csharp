@@ -15,10 +15,10 @@ class SampleClient
         {
             ApiClient client = ApiClient.GetInstance();
             client.setBasePath("https://app.leanix.net/demo/api/v1");
-            client.setApiKey("c5be3ec455aaf5fb7f9e234bb80feb2a");
+            client.setApiKey("146bb5665a2b86af3aa84fc59420f568");
 
             ServicesApi api = new ServicesApi();
-            List<Service> services = api.getServices(false, "");
+            List<Service> services = api.getServices(false, "design");
 
             foreach (Service s in services)
             {
