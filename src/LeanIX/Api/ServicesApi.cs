@@ -1835,5 +1835,50 @@ namespace LeanIX.Api {
 				}
 			}
 		}
+        /// <summary>
+        /// Create a new relation 
+        /// </summary>
+        /// <param name="ID">Unique ID</param>
+        /// <param name="body">Message-Body</param>
+        /// <returns></returns>
+        public FactsheetHasLifecycle createfactSheetHasLifecycle(string ID, FactsheetHasLifecycle body)
+        {
+            // create path and map variables
+            var path = "/services/{ID}/factSheetHasLifecycles".Replace("{format}", "json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
+
+            // query params
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+
+            // verify required params are set
+            if (ID == null)
+            {
+                throw new ApiException(400, "missing required params");
+            }
+            string paramStr = null;
+            try
+            {
+                var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
+                if (response != null)
+                {
+                    return (FactsheetHasLifecycle)ApiClient.deserialize(response, typeof(FactsheetHasLifecycle));
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (ApiException ex)
+            {
+                if (ex.ErrorCode == 404)
+                {
+                    return null;
+                }
+                else
+                {
+                    throw ex;
+                }
+            }
+        }
 		}
 	}

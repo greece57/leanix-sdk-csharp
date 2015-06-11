@@ -118,6 +118,7 @@ namespace LeanIX.Api.Common {
 					case "POST":
 					case "PUT":
 					case "DELETE":
+                        client.Method = method;
 						var swRequestWriter = new StreamWriter(client.GetRequestStream());
 						swRequestWriter.Write(serialize(body));
 						swRequestWriter.Close();
@@ -125,8 +126,9 @@ namespace LeanIX.Api.Common {
 					default:
 						throw new ApiException(500, "unknown method type " + method);         
 				}
-				
-				var webResponse = (HttpWebResponse) client.GetResponse();
+
+                var webResponse = (HttpWebResponse) client.GetResponse();
+                        
 				if (webResponse.StatusCode != HttpStatusCode.OK) throw new ApiException((int) webResponse.StatusCode, webResponse.StatusDescription);
 
 				var responseReader = new StreamReader(webResponse.GetResponseStream());

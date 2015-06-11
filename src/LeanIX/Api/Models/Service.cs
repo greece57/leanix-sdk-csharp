@@ -91,6 +91,9 @@ namespace LeanIX.Api.Models {
 		/*  */
 		public List<ServiceHasResourceHW> serviceHasResourcesHW { get; set; }
 
+        /*  */
+        public List<FactsheetHasLifecycle> factSheetHasLifecycle { get; set; }
+
 		public override string ToString()  {
 			var sb = new StringBuilder();
 			sb.Append("class Service {\n");
@@ -115,6 +118,7 @@ namespace LeanIX.Api.Models {
 			sb.Append("  serviceHasResourcesSvc: ").Append(serviceHasResourcesSvc).Append("\n");
 			sb.Append("  serviceHasResourcesSW: ").Append(serviceHasResourcesSW).Append("\n");
 			sb.Append("  serviceHasResourcesHW: ").Append(serviceHasResourcesHW).Append("\n");
+            sb.Append("  factSheetHasLifecycles:  ").Append(factSheetHasLifecycle).Append("\n");
 			sb.Append("}\n");
 			return sb.ToString();
 		}
