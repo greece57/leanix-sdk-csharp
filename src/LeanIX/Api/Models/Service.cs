@@ -27,15 +27,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace LeanIX.Api.Models {
-	public class Service {
-		/*  */
-		public string ID { get; set; }
+	public class Service : FactSheet{
+
+        public override FactSheetType factSheetType { get { return FactSheetType.APPLICATION; } }
 
 		/*  */
 		public string release { get; set; }
-
-		/*  */
-		public string name { get; set; }
 
 		/*  */
 		public string reference { get; set; }
