@@ -8,6 +8,11 @@ namespace LeanIX.Api.Models
     public abstract class FactSheet
     {
 
+        public FactSheet()
+        {
+            tags = new List<string>();
+        }
+
         /*  */
         public string ID { get; set; }
 
@@ -15,6 +20,8 @@ namespace LeanIX.Api.Models
         public string name { get; set; }
 
         public abstract FactSheetType factSheetType { get; }
+
+        public List<string> tags { get; set; }
 
         /*  */
         public List<FactSheetHasLifecycle> factSheetHasLifecycles { get; set; }

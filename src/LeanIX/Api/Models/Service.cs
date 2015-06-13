@@ -103,6 +103,7 @@ namespace LeanIX.Api.Models {
 			sb.Append("  functionalSuitabilityDescription: ").Append(functionalSuitabilityDescription).Append("\n");
 			sb.Append("  technicalSuitabilityID: ").Append(technicalSuitabilityID).Append("\n");
 			sb.Append("  technicalSuitabilityDescription: ").Append(technicalSuitabilityDescription).Append("\n");
+            sb.Append("  tags: ").Append(tags).Append("\n");
 			sb.Append("  serviceHasProjects: ").Append(serviceHasProjects).Append("\n");
 			sb.Append("  serviceHasBusinessCapabilities: ").Append(serviceHasBusinessCapabilities).Append("\n");
 			sb.Append("  serviceHasProcesses: ").Append(serviceHasProcesses).Append("\n");
