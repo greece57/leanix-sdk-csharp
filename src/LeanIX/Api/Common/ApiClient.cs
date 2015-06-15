@@ -126,8 +126,20 @@ namespace LeanIX.Api.Common {
 					default:
 						throw new ApiException(500, "unknown method type " + method);         
 				}
-				
-				var webResponse = (HttpWebResponse) client.GetResponse();
+
+                HttpWebResponse webResponse = null;
+                try
+                {
+                    webResponse = (HttpWebResponse)client.GetResponse();
+                }
+                catch (WebException wex)
+                {
+                    var pageContent = new StreamReader(wex.Response.GetResponseStream())
+                          .ReadToEnd();
+                    throw new Exception(pageContent);
+                }
+
+                    
 				if (webResponse.StatusCode != HttpStatusCode.OK) throw new ApiException((int) webResponse.StatusCode, webResponse.StatusDescription);
 
 				var responseReader = new StreamReader(webResponse.GetResponseStream());
