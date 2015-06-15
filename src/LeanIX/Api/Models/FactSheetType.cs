@@ -11,6 +11,7 @@ namespace LeanIX.Api.Models
         private readonly String name;
 
         public static readonly FactSheetType APPLICATION = new FactSheetType("services");
+        public static readonly FactSheetType IT_COMPONENT = new FactSheetType("resources");
 
         private FactSheetType(String name)
         {

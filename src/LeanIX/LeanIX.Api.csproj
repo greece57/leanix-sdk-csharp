@@ -35,8 +35,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\planningIX\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,9 +52,13 @@
     <Compile Include="Api\Common\ApiClient.cs" />
     <Compile Include="Api\Common\ApiException.cs" />
     <Compile Include="Api\ConsumersApi.cs" />
+    <Compile Include="Api\FactSheetApi.cs" />
     <Compile Include="Api\Models\BusinessCapability.cs" />
     <Compile Include="Api\Models\BusinessObject.cs" />
     <Compile Include="Api\Models\Consumer.cs" />
+    <Compile Include="Api\Models\FactSheet.cs" />
+    <Compile Include="Api\Models\FactSheetHasLifecycle.cs" />
+    <Compile Include="Api\Models\FactSheetType.cs" />
     <Compile Include="Api\Models\Process.cs" />
     <Compile Include="Api\Models\Project.cs" />
     <Compile Include="Api\Models\ProjectHasProvider.cs" />

@@ -27,7 +27,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace LeanIX.Api.Models {
-	public class Resource {
+	public class Resource : FactSheet {
+
+        public override FactSheetType factSheetType { get { return FactSheetType.IT_COMPONENT; } }
+
 		/*  */
 		public string ID { get; set; }
 
@@ -45,6 +48,9 @@ namespace LeanIX.Api.Models {
 
 		/*  */
 		public string description { get; set; }
+
+        /*  */
+        public string release { get; set; }
 
 		/*  */
 		public string objectCategoryID { get; set; }
@@ -81,7 +87,8 @@ namespace LeanIX.Api.Models {
 			sb.Append("  displayName: ").Append(displayName).Append("\n");
 			sb.Append("  reference: ").Append(reference).Append("\n");
 			sb.Append("  alias: ").Append(alias).Append("\n");
-			sb.Append("  description: ").Append(description).Append("\n");
+            sb.Append("  description: ").Append(description).Append("\n");
+            sb.Append("  release: ").Append(release).Append("\n");
 			sb.Append("  objectCategoryID: ").Append(objectCategoryID).Append("\n");
 			sb.Append("  locationID: ").Append(locationID).Append("\n");
 			sb.Append("  resourceHasProvidersSvc: ").Append(resourceHasProvidersSvc).Append("\n");
