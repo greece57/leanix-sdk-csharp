@@ -134,9 +134,10 @@ namespace LeanIX.Api.Common {
                 }
                 catch (WebException wex)
                 {
-                    var pageContent = new StreamReader(wex.Response.GetResponseStream())
-                          .ReadToEnd();
-                    throw new Exception(pageContent);
+                    //var pageContent = new StreamReader(wex.Response.GetResponseStream())
+                    //      .ReadToEnd();
+                    ///throw new Exception(pageContent);
+                    return null;
                 }
 
                     

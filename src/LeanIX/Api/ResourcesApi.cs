@@ -940,7 +940,7 @@ namespace LeanIX.Api {
 		/// </summary>
 		/// <param name="ID">Unique ID</param>
 		/// <returns></returns>
-		public List<ServiceHasResourceSvc> getServiceHasResourcesSvc (string ID) {
+		public List<ServiceHasResource> getServiceHasResourcesSvc (string ID) {
 			// create path and map variables
 			var path = "/resources/{ID}/serviceHasResourcesSvc".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
@@ -956,7 +956,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (List<ServiceHasResourceSvc>) ApiClient.deserialize(response, typeof(List<ServiceHasResourceSvc>));
+					return (List<ServiceHasResource>) ApiClient.deserialize(response, typeof(List<ServiceHasResource>));
 				}
 				else {
 					return null;
@@ -976,7 +976,7 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ServiceHasResourceSvc createServiceHasResourceSvc (string ID, Resource body) {
+		public ServiceHasResource createServiceHasResourceSvc (string ID, Resource body) {
 			// create path and map variables
 			var path = "/resources/{ID}/serviceHasResourcesSvc".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 
@@ -992,7 +992,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "POST", queryParams, body, headerParams);
 				if(response != null){
-					return (ServiceHasResourceSvc) ApiClient.deserialize(response, typeof(ServiceHasResourceSvc));
+					return (ServiceHasResource) ApiClient.deserialize(response, typeof(ServiceHasResource));
 				}
 				else {
 					return null;
@@ -1012,7 +1012,7 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <returns></returns>
-		public ServiceHasResourceSvc getServiceHasResourceSvc (string ID, string relationID) {
+		public ServiceHasResource getServiceHasResourceSvc (string ID, string relationID) {
 			// create path and map variables
 			var path = "/resources/{ID}/serviceHasResourcesSvc/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
@@ -1028,7 +1028,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "GET", queryParams, null, headerParams);
 				if(response != null){
-					return (ServiceHasResourceSvc) ApiClient.deserialize(response, typeof(ServiceHasResourceSvc));
+					return (ServiceHasResource) ApiClient.deserialize(response, typeof(ServiceHasResource));
 				}
 				else {
 					return null;
@@ -1049,7 +1049,7 @@ namespace LeanIX.Api {
 		/// <param name="relationID">Unique ID of the Relation</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ServiceHasResourceSvc updateServiceHasResourceSvc (string ID, string relationID, Resource body) {
+		public ServiceHasResource updateServiceHasResourceSvc (string ID, string relationID, Resource body) {
 			// create path and map variables
 			var path = "/resources/{ID}/serviceHasResourcesSvc/{relationID}".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString())).Replace("{" + "relationID" + "}", apiClient.escapeString(relationID.ToString()));
 
@@ -1065,7 +1065,7 @@ namespace LeanIX.Api {
 			try {
 				var response = apiClient.invokeAPI(path, "PUT", queryParams, body, headerParams);
 				if(response != null){
-					return (ServiceHasResourceSvc) ApiClient.deserialize(response, typeof(ServiceHasResourceSvc));
+					return (ServiceHasResource) ApiClient.deserialize(response, typeof(ServiceHasResource));
 				}
 				else {
 					return null;

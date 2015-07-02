@@ -71,7 +71,7 @@ namespace LeanIX.Api.Models {
 		public List<ResourceHasResourceCapability> resourceHasResourceCapabilities { get; set; }
 
 		/*  */
-		public List<ServiceHasResourceSvc> serviceHasResourcesSvc { get; set; }
+		public List<ServiceHasResource> serviceHasResourcesSvc { get; set; }
 
 		/*  */
 		public List<ServiceHasResourceSW> serviceHasResourcesSW { get; set; }
@@ -89,6 +89,7 @@ namespace LeanIX.Api.Models {
 			sb.Append("  alias: ").Append(alias).Append("\n");
             sb.Append("  description: ").Append(description).Append("\n");
             sb.Append("  release: ").Append(release).Append("\n");
+            sb.Append("  tags: ").Append(tags).Append("\n");
 			sb.Append("  objectCategoryID: ").Append(objectCategoryID).Append("\n");
 			sb.Append("  locationID: ").Append(locationID).Append("\n");
 			sb.Append("  resourceHasProvidersSvc: ").Append(resourceHasProvidersSvc).Append("\n");

@@ -27,7 +27,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace LeanIX.Api.Models {
-	public class BusinessCapability {
+	public class BusinessCapability : FactSheet {
+
+        public override FactSheetType factSheetType { get { return FactSheetType.BUSINESS_CAPABILITY; } }
+
 		/*  */
 		public string ID { get; set; }
 
@@ -59,6 +62,7 @@ namespace LeanIX.Api.Models {
 			sb.Append("  name: ").Append(name).Append("\n");
 			sb.Append("  reference: ").Append(reference).Append("\n");
 			sb.Append("  alias: ").Append(alias).Append("\n");
+            sb.Append("  tags: ").Append(tags).Append("\n");
 			sb.Append("  description: ").Append(description).Append("\n");
 			sb.Append("  parentID: ").Append(parentID).Append("\n");
 			sb.Append("  businessCapabilities: ").Append(businessCapabilities).Append("\n");

@@ -80,13 +80,7 @@ namespace LeanIX.Api.Models {
 		public List<ServiceHasInterface> serviceHasInterfaces { get; set; }
 
 		/*  */
-		public List<ServiceHasResourceSvc> serviceHasResourcesSvc { get; set; }
-
-		/*  */
-		public List<ServiceHasResourceSW> serviceHasResourcesSW { get; set; }
-
-		/*  */
-		public List<ServiceHasResourceHW> serviceHasResourcesHW { get; set; }
+		public List<ServiceHasResource> serviceHasResources { get; set; }
 
 		public override string ToString()  {
 			var sb = new StringBuilder();
@@ -110,9 +104,7 @@ namespace LeanIX.Api.Models {
 			sb.Append("  serviceHasConsumers: ").Append(serviceHasConsumers).Append("\n");
 			sb.Append("  serviceHasBusinessObjects: ").Append(serviceHasBusinessObjects).Append("\n");
 			sb.Append("  serviceHasInterfaces: ").Append(serviceHasInterfaces).Append("\n");
-			sb.Append("  serviceHasResourcesSvc: ").Append(serviceHasResourcesSvc).Append("\n");
-			sb.Append("  serviceHasResourcesSW: ").Append(serviceHasResourcesSW).Append("\n");
-			sb.Append("  serviceHasResourcesHW: ").Append(serviceHasResourcesHW).Append("\n");
+			sb.Append("  serviceHasResources: ").Append(serviceHasResources).Append("\n");
 			sb.Append("}\n");
 			return sb.ToString();
 		}

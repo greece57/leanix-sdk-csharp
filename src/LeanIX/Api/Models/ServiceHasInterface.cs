@@ -52,6 +52,9 @@ namespace LeanIX.Api.Models {
 		/*  */
 		public string interfaceTechnologyID { get; set; }
 
+        /*  */
+        public string visibilityID { get; set; }
+
 		/*  */
 		public string reference { get; set; }
 
@@ -65,7 +68,8 @@ namespace LeanIX.Api.Models {
 			sb.Append("  interfaceDirectionID: ").Append(interfaceDirectionID).Append("\n");
 			sb.Append("  interfaceFrequencyID: ").Append(interfaceFrequencyID).Append("\n");
 			sb.Append("  interfaceTypeID: ").Append(interfaceTypeID).Append("\n");
-			sb.Append("  interfaceTechnologyID: ").Append(interfaceTechnologyID).Append("\n");
+            sb.Append("  interfaceTechnologyID: ").Append(interfaceTechnologyID).Append("\n");
+            sb.Append("  visibilityID: ").Append(visibilityID).Append("\n");
 			sb.Append("  reference: ").Append(reference).Append("\n");
 			sb.Append("}\n");
 			return sb.ToString();

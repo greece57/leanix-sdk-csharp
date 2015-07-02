@@ -48,11 +48,11 @@ namespace LeanIX.Api {
 			var headerParams = new Dictionary<String, String>();
 
 			string paramStr = null;
-			if (relations != null){
+			if (false) { //relations != null){
 				paramStr = (relations != null && relations is DateTime) ? ((DateTime)(object)relations).ToString("u") : Convert.ToString(relations);
 				queryParams.Add("relations", paramStr);
 			}
-			if (filter != null){
+			if (false) { //filter != null){
 				paramStr = (filter != null && filter is DateTime) ? ((DateTime)(object)filter).ToString("u") : Convert.ToString(filter);
 				queryParams.Add("filter", paramStr);
 			}
@@ -436,7 +436,8 @@ namespace LeanIX.Api {
 		/// <param name="ID">Unique ID</param>
 		/// <param name="body">Message-Body</param>
 		/// <returns></returns>
-		public ServiceHasBusinessCapability createServiceHasBusinessCapability (string ID, BusinessCapability body) {
+        public ServiceHasBusinessCapability createServiceHasBusinessCapability(string ID, ServiceHasBusinessCapability body)
+        {
 			// create path and map variables
 			var path = "/businessCapabilities/{ID}/serviceHasBusinessCapabilities".Replace("{format}","json").Replace("{" + "ID" + "}", apiClient.escapeString(ID.ToString()));
 

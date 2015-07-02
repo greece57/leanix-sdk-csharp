@@ -27,7 +27,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace LeanIX.Api.Models {
-	public class ServiceHasResourceSvc {
+	public class ServiceHasResource {
 		/*  */
 		public string ID { get; set; }
 
@@ -48,7 +48,7 @@ namespace LeanIX.Api.Models {
 
 		public override string ToString()  {
 			var sb = new StringBuilder();
-			sb.Append("class ServiceHasResourceSvc {\n");
+			sb.Append("class ServiceHasResource {\n");
 			sb.Append("  ID: ").Append(ID).Append("\n");
 			sb.Append("  resourceID: ").Append(resourceID).Append("\n");
 			sb.Append("  serviceID: ").Append(serviceID).Append("\n");
